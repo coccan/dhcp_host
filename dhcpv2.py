@@ -73,10 +73,10 @@ def main():
 
             with open(dhcpd_temp_conf, 'w') as temp_dhcp_file:
                 for key, value in store_data.iteritems():
-                    print("write line {}: {}".format(key, value))
                     temp_dhcp_file.write(value)
                 temp_dhcp_file.write(new_dhcp_entry)
                 
+            ## make temp file as dhcpd.conf
             copyConfigFile(dhcpd_temp_conf, dhcpd_conf)
 
 # if entry does not exist append entry to original dhcpd.conf file
