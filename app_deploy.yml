@@ -1,3 +1,6 @@
+# sample package install for Ubuntu
+# usage: ansible-playbook app_deploy.yml -i my_server 
+# ansible-playbook deployes app_deploy.yml on node(s) listed in inventory file my_server
 ---
 - hosts: server_host
   remote_user: root
