@@ -1,0 +1,11 @@
+---
+- hosts: server_host
+  remote_user: root
+
+  tasks:
+  # install apache, mariadb
+  - name: install package(s)
+    apt: name={{ item }} state=present
+    with_items:
+      - apache2
+      - mariadb-server
